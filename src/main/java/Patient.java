@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Patient {
     private String fName;
@@ -105,5 +106,24 @@ public class Patient {
         this.joinDate = joinDate;
     }
 
+    /**
+     * Compares this patient with another patient for equality.
+     * Two patients are considered equal if they have the same first name,
+     * second name, and date of birth.
+     *
+     * @param o the object to compare to this patient
+     * @return true if the patients are equal, false otherwise
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Patient patient = (Patient) o;
+
+        if (!Objects.equals(fName, patient.fName)) return false;
+        if (!Objects.equals(sName, patient.sName)) return false;
+        return Objects.equals(dob, patient.dob);
+    }
 
 }
