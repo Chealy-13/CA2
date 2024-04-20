@@ -106,6 +106,14 @@ public class Patient {
         this.joinDate = joinDate;
     }
 
+    ///////////
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getfName(), getsName(), getDob(), getJoinDate());
+    }
+
     /**
      * Compares this patient with another patient for equality.
      * Two patients are considered equal if they have the same first name,

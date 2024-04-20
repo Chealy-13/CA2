@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Appointment implements Comparable<Appointment> {
     private String firstName;
@@ -14,7 +13,7 @@ public class Appointment implements Comparable<Appointment> {
      *
      * All strings will be empty, date will be set to current date, int will be 0
      */
-    public Appointment() {
+    public Appointment(String john, String doe, LocalDate now, String checkup, LocalDate nowed, int i, String s) {
     }
 
     /**
