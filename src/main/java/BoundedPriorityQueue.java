@@ -1,8 +1,13 @@
 public class BoundedPriorityQueue extends MyLinkedList{
-
-    public  BoundedPriorityQueue (int capaity){
+ private int capacity;
+ private String docName;
+    public  BoundedPriorityQueue (int capacity, String docName){
         super(); // pass the capacity of th superclass
+        this.capacity = capacity;
+        this.docName = docName;
     }
+
+
 }
 
 
